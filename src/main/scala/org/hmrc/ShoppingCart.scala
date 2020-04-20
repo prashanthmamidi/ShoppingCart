@@ -1,7 +1,7 @@
 package org.hmrc
 
 class ShoppingCart {
-  def checkout(shoppingList: List[String]): String = {
+  def checkout(shoppingList: List[String]) = {
     val totalCost = shoppingList.map(getPrice).sum.toDouble
 
     val offers = offerPriceFor(shoppingList, "Apple", 2) +
